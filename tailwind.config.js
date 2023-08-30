@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'oregano-green': '#46AA42',
+        'bistre-brown': '#412F22',
       },
     },
   },
