@@ -8,7 +8,7 @@ export interface NavItemProps extends LiHTMLAttributes<HTMLLIElement> {
 export const NavItem = (props: NavItemProps) => {
      const { children, to, ...other } = props;
      return (
-          <li {...other}>
+          <li className="px-4" {...other}>
                <NavLink to={ to }> { children } </NavLink>
           </li>
      )
