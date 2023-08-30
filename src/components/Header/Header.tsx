@@ -9,7 +9,7 @@ import logo from '../images/logo-main.png';
 
 export const Header = () => {
      return <header className="flex flex-row justify-between h-[64px] bg-oregano-green text-white items-center
-                              text-sm">
+                              text-sm fixed inset-x-0 inset-y-0">
           <div className="flex flex-row text-xl font-bold pl-4 items-center">
                <img src={logo} alt="logo" className="h-[42px] w-[42px] "/>
                <div className="pl-2">EkoBazarek</div>
