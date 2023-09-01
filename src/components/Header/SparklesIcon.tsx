@@ -1,4 +1,4 @@
-import { SparklesIcon } from '@heroicons/react/24/solid'
+import { SparklesIcon } from '@heroicons/react/24/outline'
 
 const SparklesIconClick = () => {
   alert('SparklesIcon Clicked!');
