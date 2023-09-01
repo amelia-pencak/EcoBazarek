@@ -9,6 +9,7 @@ export default {
       colors: {
         'oregano-green': '#46AA42',
         'bistre-brown': '#412F22',
+        'wood-charcoal': '#464646',
       },
     },
   },
