@@ -16,6 +16,7 @@ export const Subscribe = () => {
                          () => toast("Dziękujemy za subskrybcję", { type: "success" })
                     )
                     .finally(() => setSubscription(false));
+               setEmail("");
           }
           else {
                toast("Wpisz adres e-mail", { type: "info" });
@@ -25,12 +26,8 @@ export const Subscribe = () => {
 
 
      return (
-          // <div className="mt-[20px] mb-[15px] h-[42px] w-[580px]">
           <div className="flex flex-row ">
-               {/* <TextField 
-               className="rounded w-[420px] h-[42px] mr-[13px]"
-                    inputProps={{ value: email, onChange: (e) => setEmail(e.target.value)}}
-                   />  */}
+            
                <TextField
                     inputProps={{ value: email, onChange: (e) => setEmail(e.target.value) }}
                     className="rounded w-[420px] h-[42px] mr-4"
