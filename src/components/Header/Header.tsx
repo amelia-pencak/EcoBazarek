@@ -4,12 +4,9 @@ import MyUserIcon from "./UserIcon";
 import MyMagnifyingGlassIcon from "./MagnifyingGlassIcon";
 import logo from '../images/logo-main.png';
 
-
-
-
 export const Header = () => {
      return <header className="flex flex-row justify-between h-[64px] bg-oregano-green text-white items-center
-                              text-sm fixed inset-x-0 inset-y-0">
+                              text-sm fixed inset-x-0 inset-y-0 z-[1] shadow-md">
           <div className="flex flex-row text-xl font-bold ml-4 items-center">
                <img src={logo} alt="logo" className="h-[42px] w-[42px] "/>
                <div className="ml-2">EkoBazarek</div>
