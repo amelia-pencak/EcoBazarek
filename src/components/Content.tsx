@@ -10,8 +10,7 @@ export interface ContentProps extends HTMLAttributes<HTMLElement> {
 
 export const Content = (props: ContentProps) => {
      const { children, title, loading = false, ...other } = props;
-     return <main className=" p-10" {...other}>
-
+     return <main className="p-16" {...other}>
           <Helmet>
                <title>{title}</title>
           </Helmet>

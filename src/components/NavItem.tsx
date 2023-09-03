@@ -9,7 +9,8 @@ export const NavItem = (props: NavItemProps) => {
      const { children, to, ...other } = props;
      return (
           <li className="px-4" {...other}>
-               <NavLink to={ to }> { children } </NavLink>
+               <NavLink to={ to } style={({ isActive }) => ({ 
+                         color: isActive ? '#FCFE7F' : 'white' })}> { children } </NavLink>
           </li>
      )
 };
