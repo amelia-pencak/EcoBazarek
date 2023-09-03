@@ -1,0 +1,23 @@
+/* Assuming your header has a fixed height of 60px (change as required)*/
+header {
+  height: 60px;
+  
+}
+
+
+/* Assuming 'container' is the immediate parent of your hero-image */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This will center the child vertically */
+  height: calc(100vh - 60px); /* Assuming header height is 60px */
+}
+
+.hero-image {
+  background-image: url("about-us-hero.png");
+  height: 510px; /*24% */
+  width: 1044px;
+  background-position: center;
+  position: relative;
+  margin: 0 auto; 
+}
