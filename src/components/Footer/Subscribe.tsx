@@ -2,6 +2,7 @@ import { TextField } from "../TextFiled";
 import { useState } from "react";
 import { subscribe } from "../api";
 import { toast } from "react-toastify";
+import { Button } from "../Button";
 
 export const Subscribe = () => {
      const [subscription, setSubscription] = useState(false);
@@ -32,8 +33,8 @@ export const Subscribe = () => {
                     inputProps={{ value: email, onChange: (e) => setEmail(e.target.value) }}
                     className="rounded w-[420px] h-[42px] mr-4"
                />
-               <button onClick={subscriptionHandler} className="w-[134px] h-[42px] rounded ml-[13px] bg-oregano-green text-white>">
-                    Subskrybuj</button>
+               <Button onClick={subscriptionHandler} className="w-[134px] h-[42px] rounded ml-[13px] bg-oregano-green text-white>">
+                    Subskrybuj</Button>
           </div>
      )
 };
