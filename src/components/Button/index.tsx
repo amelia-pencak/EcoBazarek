@@ -1,1 +1,1 @@
-export * from "./SubscribeButton";
+export * from "./Button";
