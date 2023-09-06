@@ -1,8 +1,13 @@
 import wretch from "wretch";
 
+export interface SendMessageCommand {
+     fullName: string, email: string, phone:string, subject: string, message: string
+}
+
 export const subscribe = (email: string) => {
      return wretch("https://api-eko-bazarek.azurewebsites.net/api/subscribe").post({ email });
 }
-export const sendMessage = (fullName: string, email: string, phone:string, subject: string, message: string) => {
-     return wretch("https://api-eko-bazarek.azurewebsites.net/api/contact").post({ fullName, email, phone, subject, message });
+export const sendMessage = (command: SendMessageCommand) => {
+          
+     return wretch("https://api-eko-bazarek.azurewebsites.net/api/contact").post({ command });
 }
