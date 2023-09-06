@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 import { Helmet } from "react-helmet-async";
 import { Loader } from "./Loader";
 import "./Loader.css";
-import { FloatingActionButton } from "./FloatingActionButton";
+import { FloatingActionButton } from "./Button/FloatingActionButton";
 
 export interface ContentProps extends HTMLAttributes<HTMLElement> {
      title: string;
