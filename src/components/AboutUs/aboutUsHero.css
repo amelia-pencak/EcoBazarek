@@ -14,7 +14,7 @@ header {
 }
 
 .hero-image {
-  background-image: url("about-us-hero.png");
+  background-image: url("../../images/about-us-hero.png");
   height: 510px; /*24% */
   width: 1044px;
   background-position: center;

@@ -1,8 +1,8 @@
-import fb from '../images/fb.png';
-import insta from '../images/instagram.png';
-import link from '../images/linkedin.png';
-import twitter from '../images/twitter.png';
-import yt from '../images/youtube.png';
+import fb from '../../images/fb.png';
+import insta from '../../images/instagram.png';
+import link from '../../images/linkedin.png';
+import twitter from '../../images/twitter.png';
+import yt from '../../images/youtube.png';
 
 function SocialMediaIcon() {
   return (

@@ -2,7 +2,7 @@ import { NavItem } from "../NavItem";
 import MySparklesIcon from "./SparklesIcon";
 import MyUserIcon from "./UserIcon";
 import MyMagnifyingGlassIcon from "./MagnifyingGlassIcon";
-import logo from '../images/logo-main.png';
+import logo from '../../images/logo-main.png';
 
 export const Header = () => {
      return <header className="flex flex-row justify-between h-[64px] bg-oregano-green text-white items-center
