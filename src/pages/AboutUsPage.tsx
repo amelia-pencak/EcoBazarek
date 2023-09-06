@@ -1,7 +1,7 @@
 import { Content } from "../components";
 import { FilmAboutUs } from "../components/AboutUs";
 import "../components/AboutUs/aboutUsHero.css"
-import { TextAboutUs } from "../components/AboutUs/textAboutUS";
+import { TextAboutUs } from "../components/AboutUs/TextAboutUs";
 
 export const AboutUsPage = () => {
      return <Content title="AboutUs page" className="flex flex-col items-center">

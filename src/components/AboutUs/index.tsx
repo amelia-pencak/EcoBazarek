@@ -1,2 +1,2 @@
-export { TextAboutUs } from "./textAboutUS";
+export { TextAboutUs } from "./TextAboutUs";
 export { FilmAboutUs } from "./FilmAboutUs";

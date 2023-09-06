@@ -7,7 +7,7 @@ export const ContactPage = () => {
 
           <div>
                mapppppppppppppppppppppppppppppppppaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-               </div>
+          </div>
           <WriteMessageContact />
 
      </Content>
