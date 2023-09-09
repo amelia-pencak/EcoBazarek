@@ -12,19 +12,6 @@ export const WriteMessageContact = () => {
      const [subject, setSubject] = useState("");
      const [message, setMessage] = useState("");
 
-     const sendMessageHandler = () => {
-          if (fullName && email && subject) {
-               sendMessage(fullName, email, phone, subject, message)
-                    .badRequest(() => toast("Niepoprawne dane", { type: "error" }))
-                    .res(
-                         () => toast("Dziękujemy za wysłanie wiadomości", { type: "success" })
-                    )
-          }
-          else {
-               toast("Wpisz dane", { type: "info" });
-          }
-     }
-
      const restetFields = () => {
           setFullName("");
           setEmail("");
@@ -32,6 +19,22 @@ export const WriteMessageContact = () => {
           setSubject("");
           setMessage("");
      };
+
+     const sendMessageHandler = () => {
+          if (fullName && email && subject) {
+               sendMessage({fullName, email, phone, subject, message})
+                    .badRequest(() => toast("Niepoprawne dane", { type: "error" }))
+                    .res(
+                         () => toast("Dziękujemy za wysłanie wiadomości", { type: "success" })
+                    )
+          restetFields();
+          }
+          else {
+               toast("Wpisz dane", { type: "info" });
+          }
+     }
+
+    
 
      return (
           <div className="w-[690px] ml-[162px]" >
@@ -70,7 +73,7 @@ export const WriteMessageContact = () => {
                          className="rounded w-[690px] h-[42px] mb-[34px]"
                     />
                </div>
-               <div className="flex fles-col justify-end mb-[113px]">
+               <div className="flex fles-col justify-end pb-[113px]">
                     <Button onClick={restetFields} className="text-sm font-bold w-[99px] h-[42px] rounded bottom-0 right-0 bg-grey-white text-black mr-4">
                          Reset</Button>
                     <Button onClick={sendMessageHandler} className="text-sm font-bold w-[99px] h-[42px] rounded bottom-0 right-0 bg-oregano-green text-white">
