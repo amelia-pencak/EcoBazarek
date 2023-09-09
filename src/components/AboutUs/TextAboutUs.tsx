@@ -1,7 +1,7 @@
 export const TextAboutUs = () => {
      return (
           <div className="w-full max-w-[1044px]" >
-               <h2 className="text-5xl font-bold text-bistre-brown mt-10 mb-[35px]">O NAS</h2>
+               <h2 className="text-5xl font-bold text-bistre-brown mb-[35px]">O NAS</h2>
                <div>
                     <span className="block mb-2">
                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel est eget diam laoreet mattis.
