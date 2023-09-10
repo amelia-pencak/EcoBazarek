@@ -1,26 +1,14 @@
-import { toast } from "react-toastify";
 import { Content } from "../components";
 import 'react-toastify/dist/ReactToastify.css'
+import "../components/Home/mainPhotoHome.css"
+import { ImageHome } from "../components/Home/ImageHome";
+import { CategoriesTop } from "../components/Home/CategoriesTop";
 
 export const HomePage = () => {
-     const notify = () => toast("Wow so easy!");
-
-    
-  
      return <Content title="Home page" loading={false}>
-          <button onClick={notify}>Notify!</button>
-          Home page
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          <p>Home Page</p>
-          
+          <ImageHome />
+          <div className="flex flex-col items-center justify-center text-[38px] font-medium mt-[52px] mb-[37px]">POPULARNE KATEGORIE</div>
+          <CategoriesTop />
+          <div className="flex flex-col items-center justify-center text-[38px] font-medium mt-[66px]">PRODUKTY</div>
      </Content>
 };

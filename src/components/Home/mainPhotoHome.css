@@ -1,0 +1,18 @@
+
+.text-shadow {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.p-16 {
+  padding: 64px 0 0 0;
+  margin: 0;
+}
+
+.hero-image-home {
+  background-image: url("../../images/freshFruitsHome.png");
+  height: 640px;
+  /*24% */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
