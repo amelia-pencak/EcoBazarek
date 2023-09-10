@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getProductsTop } from '../api';
+import { getProductsTop } from '../../api';
 import { ImageSquare } from './ImageSquare';
 
 interface Category {

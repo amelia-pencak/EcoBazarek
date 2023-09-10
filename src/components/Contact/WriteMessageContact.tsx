@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendMessage } from "../api";
+import { sendMessage } from "../../api";
 import { toast } from "react-toastify";
 import { TextField } from "../TextFiled";
 import './ContactStyle.css'

@@ -1,6 +1,6 @@
 import { TextField } from "../TextFiled";
 import { useState } from "react";
-import { subscribe } from "../api";
+import { subscribe } from "../../api";
 import { toast } from "react-toastify";
 import { Button } from "../Button";
 
