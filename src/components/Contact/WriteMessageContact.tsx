@@ -23,35 +23,63 @@ export const WriteMessageContact = () => {
      const getFieldProps = (key: keyof MessageForm): InputProps => ({
           name: key,
           value: formData[key],
-          onChange: (e) => setFormData(prev => ({ ...prev, [key]: e.target.value }))
-     });
+          onChange: (e) => {
+               setErrors((prev) => {
+                    const next = structuredClone(prev);
+                    delete next[key];
+                    return next;
+               });
+               setFormData((prev) => ({
+                    ...prev,
+                    [key]: e.target.value}))}
+     })
 
-
+     const [errors, setErrors] = useState<{ [key: string]: string }>({});
      const sendMessageHandler = () => {
-          
-          if (formData.fullName && formData.email && formData.subject) {
-               {
-                    console.log(formData)
-                    sendMessage(formData)
-                    .badRequest(() => toast("Niepoprawne dane", { type: "error" }))
-                    .res(
-                         () => {toast("Dziękujemy za wysłanie wiadomości", { type: "success" })
-                         setFormData(getDefaultMessageForm())}
-                    )
-               }
-          }
-          else {
-               toast("Wpisz dane", { type: "info" });
-          }
+
+          console.log(formData)
+          sendMessage(formData)
+               .badRequest((err) => {
+                    const response = err.text
+                         ? (JSON.parse(err.text) as {
+                              inner: { path: string; message: string }[];
+                         })
+                         : null;
+                    if (response) {
+                         setErrors(
+                              response.inner.reduce<{ [key: string]: string }>((prev, curr) => {
+                                   prev[curr.path] = curr.message;
+                                   return prev;
+                              }, {})
+                         );
+                    }
+               })
+               .res(
+                    () => {
+                         toast("Dziękujemy za wysłanie wiadomości", { type: "success" })
+                         setFormData(getDefaultMessageForm())
+                    }
+               )
+
      }
+     const getError = (key: keyof MessageForm) => errors[key];
 
 
+     const getTextFieldProps = (key: keyof MessageForm) => {
+          const error = getError(key);
+          return {
+               helperText: error,
+               error: Boolean(error),
+          };
+     };
      return (
           <div className="w-[690px] ml-[162px]" >
                <h2 className="text-xl font-bold mb-[33px] mt-[42px]">NAPISZ WIADOMOŚĆ</h2>
                <div className="flex flex-col">
                     <h3>Imię i nazwisko*</h3>
                     <TextField
+                         required
+                         {...getTextFieldProps("fullName")}
                          inputProps={getFieldProps("fullName")}
                          className="rounded h-[42px] mb-[34px]"
                     />
@@ -59,6 +87,8 @@ export const WriteMessageContact = () => {
                          <div>
                               <h3>Email*</h3>
                               <TextField
+                                   required
+                                   {...getTextFieldProps("email")}
                                    inputProps={getFieldProps("email")}
                                    className="rounded w-[337px] h-[42px] mr-4"
                               />
@@ -66,6 +96,7 @@ export const WriteMessageContact = () => {
                          <div>
                               <h3>Telefon</h3>
                               <TextField
+                                   {...getTextFieldProps("phone")}
                                    inputProps={getFieldProps("phone")}
                                    className="rounded w-[337px] h-[42px] "
                               />
@@ -74,11 +105,14 @@ export const WriteMessageContact = () => {
                     </div>
                     <h3>Temat*</h3>
                     <TextField
+                         required
+                         {...getTextFieldProps("subject")}
                          inputProps={getFieldProps("subject")}
                          className="rounded w-[690px] h-[42px] mb-[34px]"
                     />
                     <h3>Wiadomość</h3>
                     <TextField
+                         {...getTextFieldProps("message")}
                          inputProps={getFieldProps("message")}
                          className="rounded w-[690px] h-[42px] mb-[34px]"
                     />
