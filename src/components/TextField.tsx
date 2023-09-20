@@ -34,7 +34,7 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps>((props, ref)
                error ? "text-red-500" : "text-black")}
                {...other}>
                {label && (
-                    <label className={clsx("block text-xs font-normal mb-1", classNameLabel)}>
+                    <label className={clsx("block text-xs font-semibold mb-1", classNameLabel)}>
                          {label}
                          {required && "*"}
                     </label>

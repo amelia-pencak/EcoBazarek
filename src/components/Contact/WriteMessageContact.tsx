@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { sendMessage } from "../../api";
 import { toast } from "react-toastify";
-import { TextField, InputProps } from "../TextFiled";
+import { TextField, InputProps } from "../TextField";
 import './ContactStyle.css'
 import { Button } from "../Button";
 import { MessageForm } from "../../api/types";

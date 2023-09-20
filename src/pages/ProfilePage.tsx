@@ -1,7 +1,7 @@
 import { useState, useContext,useEffect  } from "react";
 import { Content } from "../components"
 import { Button } from "../components/Button";
-import { TextField } from "../components/TextFiled";
+import { TextField } from "../components/TextField";
 import { UserContext } from "../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +17,7 @@ export const ProfilePage = () => {
           }
       }, [isLogin, navigate]);
 
-     return <Content title="Profil użytkownika" loading={logining} className="pl-[161px] pt-[136px]  bg-grey-white">
+     return <Content title="Profil użytkownika" loading={logining} className="pl-[161px] pt-[136px] text-bistre-brown bg-grey-white">
           {!isLogin && (
                <>
                <div className="text-[48px] font-bold">ZALOGUJ SIĘ</div>

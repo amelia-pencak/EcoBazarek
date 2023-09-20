@@ -1,4 +1,4 @@
-import { TextField } from "../TextFiled";
+import { TextField } from "../TextField";
 import { useState } from "react";
 import { subscribe } from "../../api";
 import { toast } from "react-toastify";
@@ -30,11 +30,11 @@ export const Subscribe = () => {
           <div className="flex flex-row ">
             
                <TextField
-                    inputProps={{ value: email, onChange: (e) => setEmail(e.target.value) }}
+                    inputProps={{ value: email, onChange: (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value) }}
                     className="rounded w-[420px] h-[42px] mr-4"
                />
                <Button onClick={subscriptionHandler} className="w-[134px] h-[42px] rounded ml-[13px] bg-oregano-green text-white>">
-                    Subskrybuj</Button>
+                    SUBSKRYBUJ</Button>
           </div>
      )
 };
