@@ -6,7 +6,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { HomePage, AboutUsPage, ProductsPage, ContactPage } from './pages';
+import { HomePage, AboutUsPage, ProductsPage, ContactPage, PageNotFound } from './pages';
+import { ProfilePage } from './pages/ProfilePage.tsx';
+import { EditProfilePage } from './pages/EditProfilePage.tsx';
+import { RegistrationPage } from './pages/RegistrationPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,22 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/profile",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/not-found",
+        element: <PageNotFound />,
+      },
+      {
+        path: "/edit-profile",
+        element: <EditProfilePage />,
+      },
+      {
+        path: "/registration",
+        element: <RegistrationPage />,
       }
     ],
   },
