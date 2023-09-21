@@ -9,7 +9,7 @@ import {
 import { HomePage, AboutUsPage, ProductsPage, ContactPage, PageNotFound } from './pages';
 import { ProfilePage } from './pages/ProfilePage.tsx';
 import { EditProfilePage } from './pages/EditProfilePage.tsx';
-import { RegistrationPage } from './pages/RegistrationPage.tsx';
+import { RegistrationPage } from './pages/RegistrationPage/RegistrationPage.tsx';
 
 const router = createBrowserRouter([
   {

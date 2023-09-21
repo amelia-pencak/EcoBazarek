@@ -1,4 +1,5 @@
 import wretch from "wretch";
+import { CreateUserProfile } from "./types";
 
 export interface SendMessageCommand {
      fullName: string, email: string, phone:string, subject: string, message: string
@@ -19,7 +20,6 @@ export const getProductsTop = () => {
          }
          return response.json();
      });
-
 }
 
 export const loginUser = (email: string, password: string) => {
@@ -27,4 +27,7 @@ export const loginUser = (email: string, password: string) => {
          .headers({ "Content-Type": "application/json" }) // upewnij się, że ustawiasz odpowiedni nagłówek Content-Type
          .post({ email, password });
  }
+
+ export const createUser = (newUser: CreateUserProfile) =>
+  wretch("https://api-eko-bazarek.azurewebsites.net/api/users").post({ ...newUser });
  

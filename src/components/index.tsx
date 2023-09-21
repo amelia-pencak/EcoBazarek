@@ -5,3 +5,5 @@ export { Loader } from "./Loader";
 export { Button } from "./Button/Button";
 export { TextField } from "./TextField";
 export { TextAreaField } from "./TextAreaField";
+export { FormLabel } from "./FormLabel";
+export { HelperText } from "./FormHelperText";

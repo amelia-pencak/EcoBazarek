@@ -1,29 +1,29 @@
 import clsx from "clsx";
-import { HtmlHTMLAttributes, InputHTMLAttributes, RefObject, forwardRef } from "react";
+import { HtmlHTMLAttributes, RefObject, TextareaHTMLAttributes, forwardRef } from "react";
 import { FormLabel } from "./FormLabel";
 import { HelperText } from "./FormHelperText";
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> { }
+export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> { }
 
-export interface TextFieldProps extends Omit<HtmlHTMLAttributes<HTMLInputElement>, "children"> {
-     inputProps?: InputProps;
+export interface TextAreaFieldProps extends Omit<HtmlHTMLAttributes<HTMLInputElement>, "children"> {
+     textAreaProps?: TextAreaProps;
      classNameLabel?: string;
      classNameHelperText?: string;
      label?: string;
      helperText?: string;
      required?: boolean;
      error?: boolean;
-     inputRef?: RefObject<HTMLInputElement>;
+     textAreaRef?: RefObject<HTMLTextAreaElement>;
 }
 
-export const TextField = forwardRef<HTMLDivElement, TextFieldProps>((props, ref) => {
+export const TextAreaField = forwardRef<HTMLDivElement, TextAreaFieldProps>((props, ref) => {
      const { className,
           classNameLabel,
           classNameHelperText,
-          inputProps = {},
+          textAreaProps: inputProps = {},
           label,
           helperText,
-          inputRef,
+          textAreaRef: inputRef,
           required = false,
           error = false,
           ...other } = props; 
@@ -35,17 +35,17 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps>((props, ref)
                className={clsx(className, "flex flex-col text-black",
                error ? "text-red-500" : "text-black")}
                {...other}>
-              {label && 
+               {label && 
                     <FormLabel className={classNameLabel} label={label} required={required}/>
                }
-               <input
+               <textarea
                     ref={inputRef} 
-                    className={clsx(classNameInput, "block w-full min-h-[42px] px-2 focus:outline-none font-normal text-black",
+                    className={clsx(classNameInput, "block w-full min-h-[42px] px-2 py-2 focus:outline-none font-normal text-black",
                     error ? "bg-red-200 border-2 border-red-300" : "bg-white")}
                     required={required}
                     {...otherInput}
                />
-               {helperText && 
+              {helperText && 
                     <HelperText className={classNameHelperText} text={helperText}/>
                }
           </div>
