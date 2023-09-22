@@ -29,5 +29,5 @@ export const loginUser = (email: string, password: string) => {
  }
 
  export const createUser = (newUser: CreateUserProfile) =>
-  wretch("https://api-eko-bazarek.azurewebsites.net/api/users").post({ ...newUser });
+  wretch("https://api-eko-bazarek.azurewebsites.net/api/users").headers({ "Content-Type": "application/json" }).post({ ...newUser });
  
