@@ -1,10 +1,16 @@
-/* styles.css */
+.product-list {
+     margin: 16px;
+     display: grid;
+     grid-template-columns: repeat(3, 265px);
+}
+
 .card {
      border-radius: 15px;
      display: flex;
      flex-direction: column;
      background-color: white;
      padding: 16px;
+     margin: 8px;
      width: 249px;
      height: 275px;
      text-align: left;

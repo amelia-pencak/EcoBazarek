@@ -1,0 +1,40 @@
+.left-column {
+     margin: 24px 8px;
+     box-sizing: border-box;
+}
+
+.search-box {
+     width: 249px;
+     height: 42px;
+     display: flex;
+     align-items: left;
+     place-items: center;
+     background-color: white;
+     margin-bottom: 1rem;
+
+}
+
+.search-icon {
+     color: black;
+     width: 18px;
+     height: 18px;
+     margin-left: 12px;
+     margin-right: 13px;
+}
+
+.search-box input {
+     border: none;
+     outline: none;
+
+}
+
+.filter-section {
+     margin-bottom: 2rem;
+
+}
+
+.filter-section label {
+
+     display: block;
+     margin: 0.5rem 0;
+}

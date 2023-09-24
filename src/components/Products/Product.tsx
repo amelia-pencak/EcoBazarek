@@ -34,7 +34,7 @@ export const Product = () => {
      return (
           <div>
                {loading ? (
-                    <div className="flex justify-center items-center ">
+                    <div className="flex justify-center items-center  ">
                          <Loader className="loader" />
                     </div>
                ) : (
