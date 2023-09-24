@@ -1,6 +1,6 @@
 import { NavItem } from "../NavItem";
 import MySparklesIcon from "./SparklesIcon";
-import MyUserIcon from "./UserIcon";
+import {MyUserIcon} from "./UserIcon";
 import MyMagnifyingGlassIcon from "./MagnifyingGlassIcon";
 import logo from '../../images/logo-main.png';
 
