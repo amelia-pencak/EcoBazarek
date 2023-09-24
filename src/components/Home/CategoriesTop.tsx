@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getProductsTop } from '../../api';
+import { getCategoriesTop } from '../../api';
 import { ImageSquare } from './ImageSquare';
 import { Loader } from '../Loader';
 
@@ -13,8 +13,7 @@ export const CategoriesTop = () => {
     const [topCategories, setTopCategories] = useState<Category[]>([]);
 
     useEffect(() => {
-        getProductsTop()
-
+        getCategoriesTop()
             .then(data => {
                 setTopCategories(data);
                 setLoading(false);
@@ -26,12 +25,10 @@ export const CategoriesTop = () => {
             });
     }, []);
 
-
     return (
         <div className="flex justify-center items-center">
             {loading ? (
                 <Loader className="loader mt-3 mb-[-12px]" />
-
             ) : (
                 <div className=" grid grid-cols-5 gap-x-[17px] gap-y-[18px] place-content-center">
                     {topCategories.map((item, index) => (

@@ -1,0 +1,78 @@
+/* styles.css */
+.card {
+     border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+     background-color: white;
+     padding: 16px;
+     width: 249px;
+     height: 275px;
+     text-align: left;
+     color: black;
+     justify-content: space-between;
+}
+
+.imgProducts {
+     width: 249px;
+     height: 126px;
+     background-color: #46AA42;
+}
+
+.name {
+     font-size: large;
+     font-weight: 500;
+     margin: 6px 0 3px;
+}
+
+.desc {
+     margin: 0 0 8px;
+     font-size: 12px;
+     color: gray;
+
+}
+
+.price {
+     font-size: 11px;
+     color: gray;
+}
+
+.info {
+     padding-right: 8px;
+     padding-top: 8px;
+     height: 32px;
+     display: flex;
+     flex-direction: row;
+     width: 228px;
+     justify-content: space-between;
+}
+
+.more-info-icon {
+     display: flex;
+     flex-direction: row;
+}
+
+.more-info {
+     text-decoration: underline;
+     font-size: 11px;
+     color: black;
+}
+
+.chevronIcon {
+     margin-left: 13px;
+     margin-top: 2px;
+     width: 15px;
+     height: 15px;
+     color: black;
+}
+
+.icons {
+     display: flex;
+     justify-content: flex-end;
+}
+
+.iconProducts {
+     width: 16px;
+     height: 16px;
+     margin: 0 8px;
+     color: #46AA42;
+}

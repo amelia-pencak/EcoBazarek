@@ -1,5 +1,9 @@
-import { Content } from "../../components";
+import { Product } from "../../components/Products";
 
 export const YourProducts = () => {
-     return <Content title="Your Products"> Your Products </Content>
+     return (
+          <div>
+               <Product />
+          </div>
+     )
 };
