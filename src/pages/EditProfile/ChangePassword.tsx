@@ -17,6 +17,12 @@ const ChangePassword = () => {
           setIsPasswordValid(valid);
      };
 
+     const resetFields = () => {
+          setOldPassword('');
+          setNewPassword('');
+          setConfirmPassword('');
+     };
+
      const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
           e.preventDefault();
@@ -28,10 +34,10 @@ const ChangePassword = () => {
                changePassword(token, oldPassword, newPassword)
                     .then(() => {
                          toast('Hasło zostało zaktualizowane', { type: 'success' });
-                         
+                         resetFields();
                     })
                     .catch((error) => {
-                         if (error.response && error.response.status === 400 && error.response.data.error === 'Incorrect old password') {
+                         if (error.response && error.response.status === 400 || error.response.data.error === 'Incorrect old password') {
                               toast('Stare hasło jest nieprawidłowe', { type: 'error' });
                          } else {
                               toast('Nie udało się zaktualizować hasła', { type: 'error' });
@@ -41,6 +47,8 @@ const ChangePassword = () => {
                toast('Hasła nie pasują do siebie lub nowe hasło nie spełnia kryteriów', { type: 'error' });
           }
      };
+
+     
 
      return (
           <form onSubmit={handleFormSubmit}>
