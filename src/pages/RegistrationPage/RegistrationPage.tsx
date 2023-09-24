@@ -6,7 +6,7 @@ import { useRegistrationForm } from "./useRegistrationForm";
 
 export const RegistrationPage = () => {
 
-  const {  submit, getFieldProps, getTextFieldProps,reset} = useRegistrationForm();
+  const { submit, getFieldProps, getTextFieldProps, reset } = useRegistrationForm();
 
   return (
     <Content title="Rejestracja" >
@@ -59,18 +59,18 @@ export const RegistrationPage = () => {
             />
           </div>
           <h3 className="my-9 uppercase">Adres i informacje o gospodarstwie</h3>
-            <TextField
-              className="mb-8"
-              label="Nazwa gospodarstwa"
-              required
-              {...getTextFieldProps("farmName")}
-              inputProps={{ ...getFieldProps("farmName") }}
-            />
-            <TextAreaField
-              label="Opis gospodarstwa"
-              {...getTextFieldProps("farmDesc")}
-              textAreaProps={{ rows: 4, ...getFieldProps("farmDesc") }}
-            />
+          <TextField
+            className="mb-8"
+            label="Nazwa gospodarstwa"
+            required
+            {...getTextFieldProps("farmName")}
+            inputProps={{ ...getFieldProps("farmName") }}
+          />
+          <TextAreaField
+            label="Opis gospodarstwa"
+            {...getTextFieldProps("farmDesc")}
+            textAreaProps={{ rows: 4, ...getFieldProps("farmDesc") }}
+          />
           <div className="mt-7 grid grid-rows-1 grid-cols-2 gap-x-4 gap-y-6">
             <TextField
               label="Ulica"
@@ -82,12 +82,12 @@ export const RegistrationPage = () => {
               <TextField
                 label="Numer domu"
                 required
-              {...getTextFieldProps("streetNumber")}
+                {...getTextFieldProps("streetNumber")}
                 inputProps={{ ...getFieldProps("streetNumber") }}
               />
               <TextField
                 label="Numer mieszkania"
-              {...getTextFieldProps("flatNumber")}
+                {...getTextFieldProps("flatNumber")}
                 inputProps={{ ...getFieldProps("flatNumber") }}
               />
             </div>
@@ -107,7 +107,7 @@ export const RegistrationPage = () => {
               label="Wojewóctwo"
               required
               {...getTextFieldProps("voivodeship")}
-              inputProps={{ name: "voivodeship" }}
+              inputProps={{ ...getFieldProps("voivodeship") }}
             />
             <TextField
               label="Powiat"
