@@ -45,6 +45,9 @@ export const useRegistrationForm = () => {
                          );
                     }
                })
+               .forbidden(() => {
+                    toast("Mail istnieje już w bazie", { type: "error" });
+                })
                .res(response => {
                     if (response.status == 200) {
                          login(formData.email, formData.password);

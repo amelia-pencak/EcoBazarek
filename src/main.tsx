@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { HomePage, AboutUsPage, ProductsPage, ContactPage, PageNotFound } from './pages';
 import { ProfilePage } from './pages/ProfilePage.tsx';
-import { EditProfilePage } from './pages/EditProfilePage.tsx';
+import { EditProfilePage } from './pages/EditProfile/EditProfilePage.tsx';
 import { RegistrationPage } from './pages/RegistrationPage/RegistrationPage.tsx';
 
 const router = createBrowserRouter([
@@ -48,6 +48,7 @@ const router = createBrowserRouter([
         path: "/registration",
         element: <RegistrationPage />,
       }
+   
     ],
   },
 ]);
