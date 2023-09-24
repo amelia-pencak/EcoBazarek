@@ -1,0 +1,27 @@
+.Button-root {
+     /* text-transform: uppercase; */
+     height: 42px;
+     font-size: small;
+     border-radius: 4px;
+     /* width: 134px; */
+     /* padding: 12px 24px 12px 24px ; */
+     line-height: 16px;
+   }
+   
+   .Button-root.contained {
+     background-color: #46AA42;
+     color: white;
+   }
+   .Button-root.contained:hover {
+     background-color: #2f722d;
+   }
+   
+   .Button-root.text {
+     background-color: black;
+     background-color: transparent;
+   }
+   
+   .Button-root.icon {
+     padding-left: 4px;
+   }
+  
